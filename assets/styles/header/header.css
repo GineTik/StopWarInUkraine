@@ -1,0 +1,6 @@
+@import url(navbar.css);
+
+header {
+    display: flex;
+    align-items: center;
+}

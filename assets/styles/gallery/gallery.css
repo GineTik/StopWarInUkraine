@@ -1,0 +1,36 @@
+.gallery .col {
+    display: flex;
+    flex-direction: column;
+}
+
+.gallery__text {
+    margin-bottom: 30px;
+}
+.gallery__image {
+    width: 100%;
+    margin-bottom: 30px;
+    flex: 1 1 auto;
+}
+
+
+@media (max-width: 750px) {
+    .gallery .col {
+        flex: 0 0 100%;
+    }
+}
+
+@media (max-width: 550px) {
+    .gallery__image {
+        margin-bottom: 10px;
+    }
+    .gallery__text {
+        padding: 0 10px;
+        text-align: center;
+    }
+    .gallery .col {
+        padding: 0;
+    }
+    .gallery.row {
+        padding: 0;
+    }
+}

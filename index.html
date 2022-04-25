@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>#StopWarInUkraine</title>
+    <link rel="icon" href="assets/images/logo.png">
+
+    <link rel="stylesheet" href="libs/bootstrap-5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/styles/style.css">
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-dark">
+
+    <header class="container mt-3">
+        <span class="logo">#Stop<span class="text-danger">War</span>InUkraine</span>
+        <nav class="navbar">
+            <div class="navbar__content">
+                <a href="#" class="navbar__link">People</a>
+                <a href="#" class="navbar__link">Cities</a>
+                <a href="#" class="navbar__link">Paws</a>
+                <a href="#" class="navbar__link">Talents</a>
+                <a href="#" class="navbar__link">Media</a>
+                <a href="#" class="navbar__link">Arts</a>
+            </div>
+            <div id="navbar-toggle" class="button-rounded navbar__button">
+                <ion-icon name="apps-outline"></ion-icon>
+            </div>
+        </nav>
+    </header>
+
+    <section class="present">
+        <div class="container">
+            <h1 class="present__title">Stop <span class="text-danger">war</span> in Ukraine</h1>
+            <video id="present__video" class="present__video" src="assets/videos/present.mp4" preload="auto" no-controls autoplay loop muted></video>
+            <p>Ukraine was attacked by Russia in February, 24, 2022</p>
+    
+            <div class="navigation">
+                <div id="video-play-stop" class="button-rounded navigation__button m-3"></div>
+                <div id="video-volume" class="button-rounded navigation__button m-3"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="row stats">
+        <h2 class="title">Злочини російської армії</h2>
+        <div class="col-3">
+            <span>Зареєстровано злочині агресії та воєні злочини</span>
+            <h2 class="stats__title">2541</h2>
+            <span>злочинів</span>
+        </div>
+        <div class="col-3">
+            <span>Злочини проти національної безпеки</span>
+            <h2 class="stats__title">1574</h2>
+            <span>злочинів</span>
+        </div>
+        <div class="col-3">
+            <span>Магістральна справа щодо агресії рф</span>
+            <h2 class="stats__title">186</h2>
+            <span>злочинів</span>
+        </div>
+        <div class="col-3">
+            <span>Загинуло</span>
+            <h2 class="stats__title">128</h2>
+            <span>дітей</span>
+        </div>
+        <div class="col-3">
+            <span>Поранено</span>
+            <h2 class="stats__title">172</h2>
+            <span>дитини</span>
+        </div>
+        <div class="col-3">
+            <span>Вбито</span>
+            <h2 class="stats__title">10</h2>
+            <span>журналістів</span>
+        </div>
+        <div class="col-3">
+            <span>Зафіксовано</span>
+            <h2 class="stats__title">6</h2>
+            <span>викрадань та журналістських катувань</span>
+        </div>
+        <div class="col-3">
+            <span>Багато злочинів можуть бути не знайденими</span>
+            <span class="fs-3 fw-bold text-danger">!!!</span>
+        </div>
+    </section>
+
+
+    <section class="container row gallery">
+        <h2 class="title">Фотогалерея</h2>
+        <div class="col">
+            <p class="gallery__text text-white-50">У нас немає величезної області - з океану в океан, у нас немає ядерної зброї, ми не заповнюємо глобальний нафтовий ринок та газ. Але у нас є наші люди та наша земля. Для нас це золото.</p>
+            <img class="gallery__image" src="assets/images/gallery/2.png">
+            <img class="gallery__image" src="assets/images/gallery/3.png">
+        </div>
+        <div class="col">
+            <img class="gallery__image" src="assets/images/gallery/1.png">
+            <img class="gallery__image" src="assets/images/gallery/4.png">
+        </div>
+        <img class="gallery__image" src="assets/images/gallery/6.png">
+    </section>
+
+    
+    <footer>
+        <h2 class="title">#Stop<span class="text-danger">War</span>InUkraine</h2>
+        <p class="text-white-50 text-center">Вперше з моменту Другої світової війни Європа переживає таку трагедію. Російські війська знищують українські села та міста, вбиваючи цивільних осіб. Ми можемо і повинні зупинити їх!</p>
+    </footer>
+
+
+    <script src="libs/bootstrap-5/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+
+    <script type="module">
+        import { ToggleButton, ToggleState } from "./assets/js/ToggleButton.js";
+
+       window.onload = function() {
+            var video = document.getElementById('present__video');
+            
+
+            new ToggleButton(
+                document.getElementById('video-play-stop'),
+                new ToggleState('pause-outline', () => {
+                    video.pause();
+                }),
+                new ToggleState('play-outline', () => {
+                    video.play();
+                })
+            );
+
+
+            new ToggleButton(
+                document.getElementById('video-volume'),
+                new ToggleState('volume-high-outline', () => {
+                    video.muted = false;
+                    video.volume = 0.3;
+                }),
+                new ToggleState('volume-mute-outline', () => {
+                    video.muted = true;
+                })
+            );
+
+
+            var navbar = document.querySelector('.navbar__content')
+            new ToggleButton(
+                document.getElementById('navbar-toggle'),
+                new ToggleState('apps-outline', () => {
+                    navbar.classList.add("navbar__content--active");
+                    document.body.style.overflow = "hidden";
+                    window.scrollTo( 0, 0 );
+                }),
+                new ToggleState('close-outline', () => {
+                    navbar.classList.remove("navbar__content--active");
+                    document.body.style.overflow = "auto";
+                })
+            );
+       }
+    </script>
+</body>
+</html>

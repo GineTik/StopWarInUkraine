@@ -1,0 +1,43 @@
+* {
+    font-family: "Roboto Slab", 'Open Sans', sans-serif;
+    color: var(--light)
+}
+
+.text-danger { 
+    color: var(--red) !important;
+}
+
+h1 {
+    font-size: 6rem;
+}
+h2 {
+    font-size: 3rem;
+}
+.present__title {
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 90%;
+    z-index: 1;
+    user-select: none;
+}
+
+.title {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+@media (max-width: 750px) {
+    h1 {
+        font-size: 4rem;
+    }
+    h2 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: .9rem
+    }
+}

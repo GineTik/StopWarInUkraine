@@ -1,0 +1,11 @@
+:root {
+    --red: #f04730;
+    --light: #fff;
+    --dark: #1b1b1b;
+
+    --red-rgb: 240, 71, 48;
+    --light-rgb: 255, 255, 255;
+
+    /* bootstrap colors */
+    --bs-dark-rgb: 27, 27, 27;
+}

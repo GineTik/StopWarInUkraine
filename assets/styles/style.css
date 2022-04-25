@@ -1,0 +1,53 @@
+@import url(colors.css);
+@import url(text.css);
+@import url(header/header.css);
+@import url(navigaitons/navigations.css);
+@import url(stats/stats.css);
+@import url(gallery/gallery.css);
+@import url(buttons.css);
+
+section {
+    margin: 100px auto !important;
+}
+
+.container {
+    max-width: 1200px;
+}
+
+.present {
+    position: relative;
+    max-width: 1200px;
+}
+.present .container {
+    max-width: 700px;
+    width: 100%;
+}
+.present__video {
+    margin-top: -35px;
+    width: 100% !important;
+    object-fit: cover;
+    z-index: -1;
+    position: relative;
+}
+
+footer {
+    margin-bottom: 100px;
+    padding: 0 5px;
+}
+footer .title {
+    font-size: 1.7rem;
+}
+footer p {
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+@media (max-width: 550px) {
+    .present__video {
+        margin-top: 5px;
+    }
+    section {
+        margin: 50px auto !important;
+    }
+}

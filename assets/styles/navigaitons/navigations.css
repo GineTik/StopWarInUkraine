@@ -1,0 +1,22 @@
+.navigation {
+    position: absolute;
+    /* top: 550px; */
+    right: 0;
+    bottom: 25px;
+}
+
+.navigation__button {
+    font-size: 20px;
+    /* margin: 15px 20px; */
+}
+.navigation__button ion-icon[name*="play"] {
+    margin-left: 2px;
+}
+
+@media (max-width: 550px) {
+    .navigation {
+        position: static;
+        display: flex;
+        justify-content: center;
+    }
+}
